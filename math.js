@@ -1,7 +1,9 @@
-function isPrime(num) {return false;
+function isPrime(num) {
 
-  if (num < 1) {return false}  
-  if(num%1===0 && num%2!=0 && num%3!=0
-&& num%5!=0) return true;
+  if (num <= 1) {return false}  
+  for(let i=2; i<=7 ;i++){
+    if(i===4)continue;
+    return true;
+  }
   }
 module.exports = isPrime;
