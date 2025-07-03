@@ -1,20 +1,11 @@
-const isPrime  = require("./math");
+const Test = require("@codewars/test-compat");
 
-it("returns false if a number is smaller than 1",()=>{
-expect(isPrime(0)).toBe(false)
-})
-it("returns true for prime numbers",()=>{
-    expect(isPrime(7)).toEqual(true);
-})
-it("returns false if it divides by 2",()=>{
-    expect(isPrime(20)).toEqual(false);
-})
-it("returns false if it divides by ", () => {
-  expect(isPrime(30)).toEqual(false);
-});
-it("returns false if it divides by 5", () => {
-  expect(isPrime(25)).toEqual(false);
-});
-it("returns false if it divides by 7", () => {
-  expect(isPrime(21)).toEqual(false);
+describe("Sample tests", function () {
+  it("should pass sample tests", function () {
+    Test.assertDeepEquals(divisibleBy([1, 2, 3, 4, 5, 6], 2), [2, 4, 6]);
+    Test.assertDeepEquals(divisibleBy([1, 2, 3, 4, 5, 6], 3), [3, 6]);
+    Test.assertDeepEquals(divisibleBy([0, 1, 2, 3, 4, 5, 6], 4), [0, 4]);
+    Test.assertDeepEquals(divisibleBy([0], 4), [0]);
+    Test.assertDeepEquals(divisibleBy([1, 3, 5], 2), []);
+  });
 });
