@@ -1,11 +1,7 @@
-function isPrime(num) {
+function divisibleBy(numbers, divisor) {
+  return numbers % divisor === 0;
+}
 
-  if (num <= 1) {return false}  
-  if(num===2 || num===3 || num===5 || num===7)return true;
-  // for(let i=2; i<=7 ;i++){
-  //   if(i===4)continue;
-  //   return true;
-  // }
-  if(num%2===0 || num%3===0 || num%5===0 || num%7===0) return false
-  }
-module.exports = isPrime;
+
+
+module.exports={divisibleBy};

@@ -1,4 +1,4 @@
-const Test = require("@codewars/test-compat");
+const {divisibleBy} = require("./math");
 
 describe("Sample tests", function () {
   it("should pass sample tests", function () {
