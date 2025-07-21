@@ -16,21 +16,41 @@ const films = [
 ];
 //refactor this logic to use a film card template instead
 
-
-
-const filmCard=document.createElement("section");
-
-const title=document.createElement("h1");
-title.textContent = films[0].title;
-
-const director=document.createElement("p");
-director.textContent=films[0].director;
-
-filmCard.append(title,director);
+const filmCard=document.getElementById("film-card-template").content.cloneNode(true)
 
 
 
+
+filmCard.querySelector("h3").textContent=films[0].title
+filmCard.querySelector("p").textContent+=":"+films[0].director
 document.body.appendChild(filmCard)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const filmCard=document.createElement("section");
+
+// const title=document.createElement("h1");
+// title.textContent = films[0].title;
+
+// const director=document.createElement("p");
+// director.textContent=films[0].director;
+
+// filmCard.append(title,director);
+
+
+
+// document.body.appendChild(filmCard)
 
 
 
