@@ -8,7 +8,7 @@ const films = [
   },
   {
     title: "Typist Artist Pirate King",
-    directory: "Carol Morley",
+    director: "Carol Morley",
     times: ["15:00", "20:00"],
     certificate: "12A",
     duration: 108,
@@ -16,14 +16,18 @@ const films = [
 ];
 //refactor this logic to use a film card template instead
 
+
+function createFilmCard(film){
 const filmCard=document.getElementById("film-card-template").content.cloneNode(true)
+filmCard.querySelector("h3").textContent=film.title
+filmCard.querySelector("p").textContent+=":"+film.director
+filmCard.querySelector("time").textContent=film.times
+filmCard.querySelector("data").textContent=film.certificate;
 
+return filmCard
+}
 
-
-
-filmCard.querySelector("h3").textContent=films[0].title
-filmCard.querySelector("p").textContent+=":"+films[0].director
-document.body.appendChild(filmCard)
+document.body.append((createFilmCard(films[0])),createFilmCard(films[1]))
 
 
 
