@@ -27,7 +27,10 @@ filmCard.querySelector("data").textContent=film.certificate;
 return filmCard
 }
 
-document.body.append((createFilmCard(films[0])),createFilmCard(films[1]))
+for (const film of films){
+const card=createFilmCard(film)
+document.body.appendChild(card)
+}
 
 
 
